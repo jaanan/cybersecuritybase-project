@@ -21,7 +21,7 @@ public class SignupController {
     @PostConstruct
     public void init() {
         signupRepository.save(new Signup("Sign up by Ted", "Ted's address", "ted"));
-        signupRepository.save(new Signup("Sign up by Ben", "Ben's address", "ben"));
+        signupRepository.save(new Signup("Sign up by Luke", "Luke's address", "luke"));
     }
 
     @RequestMapping("/")
