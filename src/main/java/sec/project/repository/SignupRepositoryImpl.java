@@ -21,7 +21,7 @@ public class SignupRepositoryImpl implements SignupRepositoryCustom {
     @Transactional
     public Integer insecureSave(Signup signup) {
 
-        // 2013-A1-Injection
+        // 2017-A1-Injection
         // the query used by this method is vulnerable to SQL injection
 
         StringBuilder sql = new StringBuilder("INSERT INTO Signup (name, address, user) VALUES ('");
