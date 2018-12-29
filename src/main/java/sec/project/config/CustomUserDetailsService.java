@@ -28,6 +28,12 @@ public class CustomUserDetailsService implements UserDetailsService {
         if (!this.accountDetails.containsKey(username)) {
             throw new UsernameNotFoundException("No such user: " + username);
         }
+        
+    List<SimpleGrantedAuthority> authorities = Collections.singletonList(new SimpleGrantedAuthority("USER"));
+
+        if ("ben".equalsIgnoreCase(username)) {
+            authorities = Arrays.asList(new SimpleGrantedAuthority("USER"), new SimpleGrantedAuthority("ADMIN"));
+        }    
 
         return new org.springframework.security.core.userdetails.User(
                 username,
