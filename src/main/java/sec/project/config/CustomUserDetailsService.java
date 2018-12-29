@@ -20,7 +20,7 @@ public class CustomUserDetailsService implements UserDetailsService {
         // this data would typically be retrieved from a database
         this.accountDetails = new TreeMap<>();
         this.accountDetails.put("ted", "$2a$06$rtacOjuBuSlhnqMO2GKxW.Bs8J6KI0kYjw/gtF0bfErYgFyNTZRDm");
-        this.accountDetails.put("ben", "$2a$10$Ch4m.Q2bVLmaPT5Mq3bH7.VKkbDcrctbdl91vyJT4Xl4ZxuZwyeGS");
+        this.accountDetails.put("luke", "$2a$10$Ch4m.Q2bVLmaPT5Mq3bH7.VKkbDcrctbdl91vyJT4Xl4ZxuZwyeGS");
     }
 
     @Override
@@ -31,7 +31,7 @@ public class CustomUserDetailsService implements UserDetailsService {
         
         List<SimpleGrantedAuthority> authorities = Collections.singletonList(new SimpleGrantedAuthority("USER"));
 
-        if ("ben".equalsIgnoreCase(username)) {
+        if ("luke".equalsIgnoreCase(username)) {
             authorities = Arrays.asList(new SimpleGrantedAuthority("USER"), new SimpleGrantedAuthority("ADMIN"));
         }    
     
