@@ -71,7 +71,6 @@ public class SignupController {
     @RequestMapping(value = "/signups/{id}", method = RequestMethod.GET)
     public String read(Model model, @PathVariable Long id) {
 
-        // 2013-A4-Insecure Direct Object References
         // Any authenticated user can access this page using any ID and reading
         // contents that doesn't belong to them
 
